@@ -1,0 +1,8 @@
+/* Override the min-height and the wrapper overflow-y so it actually stays the full height of the page. */
+html, body, body > div.skin-blue, body > div.skin-blue > div.wrapper {
+  height: 100%;
+}
+
+.wrapper {
+  overflow-y: auto;
+}

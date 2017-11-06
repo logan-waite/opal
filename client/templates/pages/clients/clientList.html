@@ -1,5 +1,5 @@
 <template name="clientList">
-  <div class="box box-info">
+  <div id="clientList" class="box box-info">
     <div class="box-header with-border">
       <h3 class="box-title">Client List</h3>
     </div>
@@ -9,7 +9,7 @@
           <tbody>
             {{#each clients}}
               <tr>
-                <td class="js-choose-client">{{firstName}} {{lastName}}</td>
+                <td class="client js-choose-client">{{firstName}} {{lastName}}</td>
               </tr>
             {{/each}}
           </tbody>

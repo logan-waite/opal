@@ -6,3 +6,28 @@ html, body, body > div.skin-blue, body > div.skin-blue > div.wrapper {
 .wrapper {
   overflow-y: auto;
 }
+
+#clientList .client {
+  cursor: pointer;
+}
+
+.add-button {
+  color: #00a65a;
+  cursor: pointer;
+}
+
+.client-buttons button {
+  font-weight: bold;
+}
+
+#activity {
+  height: 500px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+#purchases {
+  border-top: 1px solid lightgrey;
+  margin-top: 5px;
+  padding-top: 10px;
+}

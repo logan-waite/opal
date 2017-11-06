@@ -7,7 +7,10 @@ Meteor.startup(() => {
   var clients = [
     {
       firstName: "Tony",
-      lastName: "Stark"
+      lastName: "Stark",
+      email: "moneybags@avengers.com",
+      phone: "(000) 000-0000",
+      address: "None"
     },
     {
       firstName: "Steve",

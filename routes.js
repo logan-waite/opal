@@ -1,5 +1,17 @@
+Router.onBeforeAction(function() {
+  if (!Meteor.userId()) {
+    // this.redirect("/login");
+  }
+  this.next()
+})
+// Router Configurations
 Router.configure({
   layoutTemplate: "BaseLayout",
+})
+
+// Login routes
+Router.route("/login", {
+  layoutTemplate:"emptyLayout"
 })
 
 // Dashboard Routes
@@ -11,7 +23,7 @@ Router.route('/', function() {
       // description: "Optional Description, maybe?"
     }
   });
-  this.render("page_dashboard");
+  this.render("dashboard");
 })
 // End Dashboard Routes
 
@@ -23,7 +35,7 @@ Router.route("/clients", function() {
       title: "Clients"
     }
   });
-  this.render("page_clients");
+  this.render("clients");
 })
 // End Client Routes
 
@@ -35,7 +47,7 @@ Router.route("/events", function() {
       title: "Events"
     }
   });
-  this.render("page_events");
+  this.render("events");
 })
 // End Event Routes
 
@@ -47,6 +59,6 @@ Router.route("/calendar", function() {
       title: "Calendar"
     }
   });
-  this.render("page_calendar");
+  this.render("calendar");
 })
 // End Calendar Routes

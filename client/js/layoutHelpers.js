@@ -13,3 +13,15 @@ Template.BaseLayout.helpers({
     }
   }
 })
+
+Template.BaseLayout.events({
+  "click .js-search-button" : function(event) {
+    event.preventDefault();
+    $('#search').animate({width:"toggle"}, 200);
+  },
+  "click .js-menu-item" : function(event) {
+    // $(".active").removeClass("active");
+    // console.log(Router.current().route.getName());
+    // $(this).addClass("active");
+  }
+})

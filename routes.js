@@ -1,12 +1,30 @@
-Router.onBeforeAction(function() {
-  if (!Meteor.userId()) {
-    // this.redirect("/login");
-  }
-  this.next()
-})
+// Router.onBeforeAction(function() {
+//   if (!Meteor.userId()) {
+//     // this.redirect("/login");
+//   }
+//   this.next()
+// })
 // Router Configurations
 Router.configure({
   layoutTemplate: "BaseLayout",
+  onAfterAction: function() {
+    $('.active').removeClass('active');
+    var route = Router.current().route.getName();
+    console.log(route.indexOf('client'));
+    if (route === undefined) {
+      console.log("undefined?");
+      $('#menu_dashboard').addClass('active');
+    } else if (route.indexOf("client") > -1) {
+      console.log("client page");
+      $("#menu_clients").addClass("active");
+    } else if (route.indexOf("event") > -1) {
+      $('#menu_events').addClass("active");
+    } else if (route.indexOf("calendar") > -1) {
+      $('#menu_calendar').addClass("active");
+    } else {
+      $('#menu_dashboard').addClass('active');
+    }
+  }
 })
 
 // Login routes
@@ -37,6 +55,15 @@ Router.route("/clients", function() {
   });
   this.render("clients");
 })
+Router.route("/client/:_id", function() {
+  Meteor.subscribe("clients");
+  var clientId = this.params._id;
+  this.render("clientInfo", {
+    data: function() {
+      return Clients.findOne({_id:clientId});
+    }
+  });
+});
 // End Client Routes
 
 // Event Routes

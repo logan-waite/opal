@@ -19,6 +19,8 @@
         <!-- Navbar Right Menu -->
         <div class="navbar-custom-menu">
           <ul class="nav navbar-nav">
+            <input type="text" id="search">
+            <li><a class="js-search-button"><i class="fa fa-search"></i></a></li>
             <!-- Messages: style can be found in dropdown.less-->
             <!-- <li class="dropdown messages-menu"> -->
               <!-- Menu toggle button -->
@@ -185,10 +187,10 @@
         <ul class="sidebar-menu" data-widget="tree">
           <!-- <li class="header">HEADER</li> -->
           <!-- Optionally, you can add icons to the links -->
-          <li class="active"><a href="/"><i class="fa fa-tachometer"></i> <span>Dashboard</span></a></li>
-          <li><a href="/clients"><i class="fa fa-address-card"></i> <span>Clients</span></a></li>
-          <li><a href="/events"><i class="fa fa-briefcase"></i> <span>Events</span></a></li>
-          <li><a href="/calendar"><i class="fa fa-calendar"></i> <span>Calendar</span></a></li>
+          <li id="menu_dashboard" class="active js-menu-item"><a href="/"><i class="fa fa-tachometer"></i> <span>Dashboard</span></a></li>
+          <li id="menu_clients" class="js-menu-item"><a href="/clients"><i class="fa fa-address-card"></i> <span>Clients</span></a></li>
+          <li id="menu_events" class="js-menu-item"><a href="/events"><i class="fa fa-briefcase"></i> <span>Events</span></a></li>
+          <li id="menu_calendar" class="js-menu-item"><a href="/calendar"><i class="fa fa-calendar"></i> <span>Calendar</span></a></li>
         </ul>
         <!-- /.sidebar-menu -->
       </section>

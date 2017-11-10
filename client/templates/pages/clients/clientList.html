@@ -9,7 +9,7 @@
           <tbody>
             {{#each clients}}
               <tr>
-                <td class="client js-choose-client">{{firstName}} {{lastName}}</td>
+                <td class="client"><a href="/client/{{_id}}">{{firstName}} {{lastName}}</a></td>
               </tr>
             {{/each}}
           </tbody>

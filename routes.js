@@ -10,9 +10,7 @@ Router.configure({
   onAfterAction: function() {
     $('.active').removeClass('active');
     var route = Router.current().route.getName();
-    console.log(route.indexOf('client'));
     if (route === undefined) {
-      console.log("undefined?");
       $('#menu_dashboard').addClass('active');
     } else if (route.indexOf("client") > -1) {
       console.log("client page");
@@ -80,12 +78,6 @@ Router.route("/events", function() {
 
 // Calendar Routes
 Router.route("/calendar", function() {
-  this.render("pageHeader", {
-    to: "header",
-    data: {
-      title: "Calendar"
-    }
-  });
   this.render("calendar");
 })
 // End Calendar Routes

@@ -3,3 +3,7 @@ Meteor.publish("clients", function(){
         return Clients.find({});
     // }
 });
+
+Meteor.publish("events", function() {
+  return Events.find({});
+})

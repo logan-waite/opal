@@ -72,7 +72,16 @@ Router.route("/events", function() {
       title: "Events"
     }
   });
-  this.render("events");
+  this.render("eventList");
+})
+Router.route("/event/:_id", function() {
+  Meteor.subscribe("events");
+  var eventId = this.params._id;
+  this.render("EventInfo", {
+    data: function() {
+      return Events.findOne({_id:eventId});
+    }
+  })
 })
 // End Event Routes
 

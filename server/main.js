@@ -22,10 +22,27 @@ Meteor.startup(() => {
     }
   ];
 
+  var events = [
+    {
+      startDate: moment().format("MMM D"),
+      endDate: moment().add(3, 'days').format("MMM D"),
+      location: "San Diego",
+      type: "Retreat",
+      max_attendees: 7,
+      current_attendees: 3
+    }
+  ]
+
   Clients.remove({});
+  Events.remove({});
 
   for (var i = 0; i < clients.length; i++) {
     client = clients[i];
     Clients.insert(client);
+  }
+
+  for (var i = 0; i < events.length; i++) {
+    event = events[i];
+    Events.insert(event);
   }
 });

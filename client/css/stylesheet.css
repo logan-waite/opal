@@ -7,6 +7,34 @@ html, body, body > div.skin-blue, body > div.skin-blue > div.wrapper {
   overflow-y: auto;
 }
 
+#search {
+  display: none;
+  position: relative;
+  top: 10px;
+  color: black;
+  float: left;
+  height: 30px;
+  width: 150px;
+  border-radius: 2px;
+  border: none;
+}
+
+/*************/
+/** Clients **/
+/*************/
+
+.profile-user-img {
+  margin: 0 auto;
+  width: 100px;
+  padding: 3px;
+  border: 3px solid #d2d6de;
+}
+
+#activity {
+  max-height: 600px;
+  overflow-y: auto;
+}
+
 #clientList .client {
   cursor: pointer;
 }
@@ -20,26 +48,18 @@ html, body, body > div.skin-blue, body > div.skin-blue > div.wrapper {
   font-weight: bold;
 }
 
-#activity {
-  max-height: 600px;
-  overflow-y: auto;
+/************/
+/** Events **/
+/************/
+
+.event_info {
+  /* width: 100%; */
+  display: block;
+  margin: 5px;
 }
 
-#search {
-  display: none;
-  position: relative;
-  top: 10px;
-  color: black;
-  float: left;
-  height: 30px;
-  width: 150px;
-  border-radius: 2px;
-  border: none;
-}
-
-.profile-user-img {
-  margin: 0 auto;
-  width: 100px;
+.event_info.more_info {
+  float: right;
+  border: 1px solid blue;
   padding: 3px;
-  border: 3px solid #d2d6de;
 }

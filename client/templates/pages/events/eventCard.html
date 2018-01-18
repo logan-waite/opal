@@ -2,7 +2,7 @@
 <div class="col-md-3">
   <div class="box box-widget">
     <div class="box-header with-border">
-      <h3 class="box-title">San Diego - Nov 3</h3>
+      <h3 class="box-title">{{location}} - {{startDate}}</h3>
       <div class="box-tools">
         <button type="button" class="btn btn-box-tool" data-widget="collapse">
           <i class="fa fa-minus"></i>
@@ -10,7 +10,10 @@
       </div>
     </div>
     <div class="box-body">
-      Here is some information about the retreat
+      <span class="event_info event_type">{{type}}</span>
+      <span class="event_info event_location">{{location}}</span>
+      <span class="event_info event_attendees">{{current_attendees}} / {{max_attendees}}</span>
+      <span class="event_info more_info"><a href="event/{{_id}}">More Info</a></span>
     </div>
   </div>
 </div>
